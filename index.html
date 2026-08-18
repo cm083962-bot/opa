@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arena das Chuteiras</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-dribbble"></i>
+                ARENA <span>DAS CHUTEIRAS</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Chuteiras</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diferenciais">Diferenciais</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <p class="hero-tag">
+                        ⚽ SUA LOJA DE FUTEBOL
+                    </p>
+
+                    <h1>
+                        Sua paixão pelo futebol
+                        <span>começa pelos pés.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Encontre chuteiras de qualidade para futebol de campo
+                        e futsal. Escolha seu modelo e fale diretamente com
+                        nossa equipe pelo WhatsApp.
+                    </p>
+
+                    <a href="#produtos" class="btn btn-green">
+                        Ver chuteiras
+                        <i class="bi bi-arrow-down"></i>
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5 text-center">
+
+                    <div class="hero-ball">
+                        ⚽
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="products-section">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span>ESCOLHA SEU MODELO</span>
+
+                <h2>
+                    Nossas <strong>Chuteiras</strong>
+                </h2>
+
+                <p>
+                    Modelos para campo e quadra esperando por você.
+                </p>
+
+            </div>
+
+
+            <!-- BUSCA -->
+            <div class="search-area">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text" id="searchInput" placeholder="Buscar chuteira...">
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+            <div class="filters text-center">
+
+                <button class="filter-btn active" data-filter="todos">
+                    Todos
+                </button>
+
+                <button class="filter-btn" data-filter="campo">
+                    Campo
+                </button>
+
+                <button class="filter-btn" data-filter="quadra">
+                    Quadra
+                </button>
+
+            </div>
+
+
+            <!-- CARDS -->
+            <div class="row g-4 mt-3" id="productsContainer">
+
+                <!-- PRODUTO 1 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="campo" data-name="Chuteira Speed Campo">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Speed Campo">
+
+                            <span class="category">CAMPO</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Speed Campo</h3>
+
+                            <p>
+                                Leve, confortável e ideal para jogadores
+                                que buscam velocidade e controle.
+                            </p>
+
+                            <div class="price">
+                                R$ 199,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Speed Campo')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="campo" data-name="Chuteira Pro Campo">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Pro Campo">
+
+                            <span class="category">CAMPO</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Pro Campo</h3>
+
+                            <p>
+                                Excelente aderência e conforto para suas
+                                partidas de futebol.
+                            </p>
+
+                            <div class="price">
+                                R$ 249,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Pro Campo')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="campo" data-name="Chuteira Elite Campo">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Elite Campo">
+
+                            <span class="category">CAMPO</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Elite Campo</h3>
+
+                            <p>
+                                Modelo premium para quem procura
+                                desempenho e conforto.
+                            </p>
+
+                            <div class="price">
+                                R$ 299,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Elite Campo')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 4 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="quadra" data-name="Chuteira Futsal Street">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Futsal Street">
+
+                            <span class="category quadra">QUADRA</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Futsal Street</h3>
+
+                            <p>
+                                Solado ideal para futsal, oferecendo
+                                estabilidade e controle.
+                            </p>
+
+                            <div class="price">
+                                R$ 179,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Futsal Street')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 5 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="quadra" data-name="Chuteira Futsal Pro">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Futsal Pro">
+
+                            <span class="category quadra">QUADRA</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Futsal Pro</h3>
+
+                            <p>
+                                Confortável e resistente para partidas
+                                intensas de futsal.
+                            </p>
+
+                            <div class="price">
+                                R$ 219,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Futsal Pro')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 6 -->
+                <div class="col-sm-6 col-lg-4 product-item" data-category="quadra" data-name="Chuteira Futsal Elite">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80"
+                                alt="Chuteira Futsal Elite">
+
+                            <span class="category quadra">QUADRA</span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h3>Chuteira Futsal Elite</h3>
+
+                            <p>
+                                Modelo premium para jogadores que procuram
+                                máximo desempenho.
+                            </p>
+
+                            <div class="price">
+                                R$ 269,90
+                            </div>
+
+                            <button class="buy-btn" onclick="comprar('Chuteira Futsal Elite')">
+
+                                <i class="bi bi-whatsapp"></i>
+                                Quero comprar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="noResults" class="no-results">
+                Nenhuma chuteira encontrada.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="features">
+
+        <div class="container">
+
+            <div class="section-title text-center">
+
+                <span>POR QUE ESCOLHER A ARENA?</span>
+
+                <h2>
+                    Feito para quem <strong>ama futebol</strong>
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-dribbble"></i>
+
+                        <h3>Campo e Quadra</h3>
+
+                        <p>
+                            Chuteiras para diferentes modalidades
+                            do futebol.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-box-seam"></i>
+
+                        <h3>Envio Nacional</h3>
+
+                        <p>
+                            Enviamos seus produtos para todo o Brasil.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-rulers"></i>
+
+                        <h3>Diversos tamanhos</h3>
+
+                        <p>
+                            Consulte nossa equipe sobre os tamanhos
+                            disponíveis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature-card">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        <h3>Atendimento</h3>
+
+                        <p>
+                            Fale diretamente conosco pelo WhatsApp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section id="contato" class="cta">
+
+        <div class="container text-center">
+
+            <h2>
+                Pronto para entrar em campo?
+            </h2>
+
+            <p>
+                Escolha sua chuteira e fale com a nossa equipe.
+            </p>
+
+            <button class="whatsapp-btn" onclick="abrirWhatsApp()">
+
+                <i class="bi bi-whatsapp"></i>
+
+                Falar pelo WhatsApp
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container text-center">
+
+            <h3>
+                ⚽ ARENA DAS CHUTEIRAS
+            </h3>
+
+            <p>
+                Sua paixão pelo futebol começa pelos pés.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#" onclick="abrirWhatsApp()">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+            </div>
+
+            <hr>
+
+            <small>
+                © 2026 Arena das Chuteiras — Todos os direitos reservados.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
